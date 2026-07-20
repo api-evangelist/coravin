@@ -1,0 +1,27 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coravin.com/.well-known/openid-configuration
+notes: >-
+  Auth model captured from the live OIDC / OAuth 2.0 authorization-server
+  metadata published by Coravin's Shopify storefront (Shopify Customer
+  Accounts). This governs customer-account and agentic-commerce access, not a
+  standalone Coravin developer API (Coravin publishes none).
+summary:
+  types: [oauth2, openIdConnect]
+  oauth2_flows: [authorizationCode]
+  pkce: S256
+schemes:
+  - name: ShopifyCustomerAccounts
+    type: openIdConnect
+    issuer: https://shopify.com/authentication/83805208849
+    openIdConnectUrl: https://www.coravin.com/.well-known/openid-configuration
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://shopify.com/authentication/83805208849/oauth/authorize
+        tokenUrl: https://shopify.com/authentication/83805208849/oauth/token
+        endSessionUrl: https://shopify.com/authentication/83805208849/logout
+    grant_types: [authorization_code, refresh_token, 'urn:ietf:params:oauth:grant-type:jwt-bearer']
+    token_endpoint_auth_methods: [client_secret_basic]
+    code_challenge_methods: [S256]
+    jwks_uri: https://shopify.com/authentication/83805208849/.well-known/jwks.json
+    sources: [well-known/coravin-openid-configuration.json]
