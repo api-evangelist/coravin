@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coravin.com/.well-known/openid-configuration
+notes: >-
+  OAuth 2.0 / OIDC scopes advertised by Coravin's Shopify Customer Accounts
+  authorization server (scopes_supported in the OIDC discovery document).
+docs: https://shopify.dev/docs/api/customer
+schemes:
+  - name: ShopifyCustomerAccounts
+    source: well-known/coravin-openid-configuration.json
+    flows:
+      - flow: authorizationCode
+        authorizationUrl: https://shopify.com/authentication/83805208849/oauth/authorize
+        tokenUrl: https://shopify.com/authentication/83805208849/oauth/token
+scopes:
+  - scope: openid
+    description: OpenID Connect authentication; issue an ID token for the customer.
+    flows: [authorizationCode]
+    sources: [well-known/coravin-openid-configuration.json]
+  - scope: email
+    description: Access the customer's email address and verification status.
+    flows: [authorizationCode]
+    sources: [well-known/coravin-openid-configuration.json]
+  - scope: customer-account-api:full
+    description: Full access to the Shopify Customer Account API on behalf of the signed-in customer.
+    flows: [authorizationCode]
+    sources: [well-known/coravin-openid-configuration.json]
+  - scope: customer-account-mcp-api:full
+    description: Full access to the Customer Account MCP API for agentic-commerce operations.
+    flows: [authorizationCode]
+    sources: [well-known/coravin-openid-configuration.json]

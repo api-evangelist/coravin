@@ -1,0 +1,32 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coravin.com/.well-known/
+notes: >-
+  Cross-cutting standards evidenced by Coravin's live agent-native storefront
+  surface (Shopify). No standalone Coravin developer API exists; these assert
+  the protocols the storefront's agentic-commerce endpoints conform to.
+standards:
+  - id: oauth2
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server metadata (RFC 8414), authorization_code + refresh_token grants
+  - id: oidc
+    conforms: true
+    evidence: /.well-known/openid-configuration discovery document (Shopify Customer Accounts)
+  - id: rfc8414-authorization-server-metadata
+    conforms: true
+    evidence: /.well-known/oauth-authorization-server returns 200 JSON
+  - id: pkce
+    conforms: true
+    evidence: code_challenge_methods_supported = [S256]
+  - id: ucp
+    conforms: true
+    evidence: /.well-known/ucp Universal Commerce Protocol merchant profile v2026-04-08
+  - id: mcp
+    conforms: true
+    evidence: UCP shopping MCP transport endpoint at /api/ucp/mcp
+  - id: rfc9457-problem-details
+    conforms: false
+  - id: fhir-r4
+    conforms: false
+  - id: fapi
+    conforms: false

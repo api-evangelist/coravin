@@ -1,7 +1,29 @@
 aid: coravin
 name: Coravin
-description: Coravin is a company surfaced as a portfolio company of battery-ventures and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Coravin is a consumer beverage-technology company best known for its wine
+  preservation systems, which use a thin needle and inert argon gas to pour wine
+  by the glass without pulling the cork, leaving the remaining wine unoxidized
+  for weeks or months. Its product line spans the Timeless, Pivot, and Sparkling
+  systems plus Pure argon capsules, sold direct-to-consumer and through retail
+  and trade channels. Coravin does not operate a standalone public developer
+  API; its direct storefront runs on Shopify, which exposes a real agent-native
+  commerce surface — a Universal Commerce Protocol (UCP) merchant profile, a
+  hosted shopping MCP endpoint, and OIDC / OAuth 2.0 authorization-server
+  metadata for Shopify Customer Accounts. Backed by Battery Ventures.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.coravin.com/cdn/shop/files/hero-sg-black.png?v=1746714317
 url: https://raw.githubusercontent.com/api-evangelist/coravin/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,12 +33,50 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Wine
+- Beverage
+- Consumer Products
+- Ecommerce
+- Shopify
+- Agentic Commerce
+- Universal Commerce Protocol
+- Wine Preservation
 apis: []
+common:
+- type: DomainSecurity
+  url: security/coravin-domain-security.yml
+- type: Website
+  url: https://www.coravin.com/
+- type: Support
+  url: https://www.coravin.com/pages/support-product
+- type: Blog
+  url: https://www.coravin.com/blogs/community
+- type: PrivacyPolicy
+  url: https://www.coravin.com/policies/privacy-policy
+- type: TermsOfService
+  url: https://www.coravin.com/policies/terms-of-service
+- type: LLMsTxt
+  url: llms/coravin-llms.txt
+- type: WellKnown
+  url: well-known/coravin-well-known.yml
+- type: MCPServer
+  url: mcp/coravin-mcp.yml
+- type: Authentication
+  url: authentication/coravin-authentication.yml
+- type: OAuthScopes
+  url: scopes/coravin-scopes.yml
+- type: Conformance
+  url: conformance/coravin-conformance.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

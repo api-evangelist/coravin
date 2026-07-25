@@ -1,0 +1,31 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.coravin.com/.well-known/
+host: https://www.coravin.com
+notes: >-
+  Coravin's direct-to-consumer store runs on Shopify, which exposes a real
+  agent-native discovery surface: a UCP (Universal Commerce Protocol) merchant
+  profile, OIDC / OAuth 2.0 authorization-server metadata for Shopify Customer
+  Accounts, and an agent llms.txt. There is no standalone Coravin developer API.
+documents:
+  - path: /.well-known/ucp
+    status: 200
+    file: coravin-ucp.json
+    description: UCP merchant profile (versions, services, capabilities, payment handlers)
+  - path: /.well-known/ucp/2026-04-08
+    status: 200
+    description: Versioned UCP profile
+  - path: /.well-known/openid-configuration
+    status: 200
+    file: coravin-openid-configuration.json
+    description: OIDC discovery (Shopify Customer Accounts)
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: coravin-oauth-authorization-server.json
+    description: RFC 8414 OAuth 2.0 authorization server metadata
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
