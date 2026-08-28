@@ -11,6 +11,17 @@ description: >-
   commerce surface — a Universal Commerce Protocol (UCP) merchant profile, a
   hosted shopping MCP endpoint, and OIDC / OAuth 2.0 authorization-server
   metadata for Shopify Customer Accounts. Backed by Battery Ventures.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
