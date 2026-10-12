@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/coravin/integrations
+- https://n8n.io/integrations/coravin/
+- https://composio.dev/toolkits/coravin
+- https://monid.ai/tools/coravin
+checked:
+- https://composio.dev/toolkits/coravin
+- https://monid.ai/tools/coravin
+- https://n8n.io/integrations/coravin/
+- https://zapier.com/apps/coravin/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
